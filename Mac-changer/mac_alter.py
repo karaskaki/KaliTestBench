@@ -28,18 +28,14 @@ def mac_changer(interfc, mac_alter):
 x = 0
 (container, args) = get_args()
 if not container.interfc:
-    interfc = input("The interface that needs change > ")
-    x = 1
-elif not container.mac_alter:
-    mac_alter = input("New Mac Address: ")
-    x = 2
+    interfc = input("The interface that needs change > ")    
 else:
     interfc = container.interfc
+if not container.mac_alter:
+    mac_alter = input("New Mac Address: ")    
+else:
     mac_alter = container.mac_alter
-if x==1:
-    mac_alter=container.mac_alter
-if x==2:
-    interfc=container.interfc
+
 mac_changer(interfc, mac_alter)
 
 
