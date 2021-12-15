@@ -32,7 +32,7 @@ if not container.interfc:
 else:
     interfc = container.interfc
 if not container.mac_alter:
-    mac_alter = input("New Mac Address: ")    
+    mac_alter = input("New MAC Address: ")    
 else:
     mac_alter = container.mac_alter
 
